@@ -30,7 +30,8 @@ class Cary extends React.Component {
             weeklyPic5: rain,
             weeklyPic6: sun,
             weeklyPic7: sun,
-        }
+        } 
+        //This is the state props being passed down to the Daily child and Weekly child. 
     }
     render() {
         return (
@@ -58,6 +59,7 @@ class Cary extends React.Component {
                     pic6={this.state.weeklyPic6}
                     pic7={this.state.weeklyPic7}
                 />
+                {/* These are the prop names chosen for when they are passed down to the children */}
             </div>
         )
     }

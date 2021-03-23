@@ -18,14 +18,17 @@
 /* a smaller box that holds the infotext and the picture */
 
 .infotext > div {
-    padding: 8px 10px
+    padding: 6px 10px
 }
+/* This is the space between the infotext */
+/* left value is top and bottom */
 
 .infotext {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     padding-left: 100px;
-    font-size: large;
-    font-weight: 550;
+    font-size:20px;
+    font-weight: 600;
 }
 /* This is the text at the bottom */
 

@@ -4,7 +4,8 @@
     justify-content: center;
     flex-wrap: wrap;
 }
-/* 56c0e3 */
+/* This is the large blue area around the boxes for the weekly elements*/
+
 .weekly div{ 
     display: flex;
     background-color: lightblue;
@@ -17,16 +18,24 @@
     flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-content: center;
-    border-color: rgb(59, 59, 59);
+    border-color: #3b3b3b;
+    border-radius: 3%;
+    box-shadow:
+    0 0 7px 2px rgb(63, 63, 63),
+    0 0 0px 0px black,
+    0 0 0px 0px black;
 }
+/* This is the container that holds the weekly elements */
 
 .weekly div h5{ 
     display: flex;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
+    padding-top: 10px;
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-content: center;
 }
+/* This is the Day of the week text in the weekly boxes */
 
 .weekly div p{ 
     display: flex;
@@ -34,17 +43,19 @@
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-content: center;
-
+    font-weight:550;
 }
 
 nav.navbar.navbar-inverse {
     margin: 0px;
 }
 /* removed a weird white space under the navbar */
+
 body {
     background-color: lightblue;
 }
 /* before the border radius was fixed the rounded navbar made the site look unprofessional  */
+
 .navbar {
     border-radius: 0px;
 }
@@ -59,7 +70,6 @@ body {
 }
 /* adds space to the right of the navbar elements */
 
-/* optimized for tablet view */
 @media (max-width: 768px) {
     .navbar a {
         text-align: center;
@@ -67,5 +77,6 @@ body {
     .nav > li > a{
         padding: 10px 15px;
     }
+    /* optimized for tablet view */
     /* fixed some navbar elements from looking ugly when sized down a bit */
 }
