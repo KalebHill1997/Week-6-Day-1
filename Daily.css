@@ -1,0 +1,50 @@
+.largecontainer {
+    display: flex;
+    background-color: lightblue;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+/* large area that holds the 2 elements for the daily information */
+
+.the2elements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/* a smaller box that holds the infotext and the picture */
+
+.infotext > div {
+    padding: 8px 10px
+}
+
+.infotext {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 100px;
+    font-size: large;
+    font-weight: 550;
+}
+/* This is the text at the bottom */
+
+/* optimized for mobile viewing */
+@media (max-width: 626px) { 
+    .infotext {
+        padding-top: 100px;
+        padding-left: none;
+        align-items: center;
+        padding-right: 100px;
+    }
+}
+.infotext div 
+    {
+        text-align: center;
+    }
+
+.picturething {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+

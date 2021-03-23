@@ -1,0 +1,71 @@
+.weekly {
+    display: flex;
+    background-color: #6cc2df;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* 56c0e3 */
+.weekly div{ 
+    display: flex;
+    background-color: lightblue;
+    padding: 50px;
+    padding-top: 10px;
+    border: 2px;
+    border-style: solid;
+    height: 250px;
+    margin: 40px;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    border-color: rgb(59, 59, 59);
+}
+
+.weekly div h5{ 
+    display: flex;
+    padding-bottom: 10px;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+}
+
+.weekly div p{ 
+    display: flex;
+    font-size: x-large;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+
+}
+
+nav.navbar.navbar-inverse {
+    margin: 0px;
+}
+/* removed a weird white space under the navbar */
+body {
+    background-color: lightblue;
+}
+/* before the border radius was fixed the rounded navbar made the site look unprofessional  */
+.navbar {
+    border-radius: 0px;
+}
+
+.navbar {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px
+}
+
+.nav > li > a{
+    padding-right: 30px;
+}
+/* adds space to the right of the navbar elements */
+
+/* optimized for tablet view */
+@media (max-width: 768px) {
+    .navbar a {
+        text-align: center;
+    }
+    .nav > li > a{
+        padding: 10px 15px;
+    }
+    /* fixed some navbar elements from looking ugly when sized down a bit */
+}
