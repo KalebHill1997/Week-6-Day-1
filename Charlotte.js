@@ -6,6 +6,7 @@ import fahrenheit from './WeatherPhotos/fahrenheit.png'
 import sun from './WeatherPhotos/sun.png'
 import rain from './WeatherPhotos/rain.png'
 import thunderstorm from './WeatherPhotos/thunderstorm.png'
+//these are the pictures and child components used within this class
 
 class Charlotte extends React.Component {
     constructor() {
@@ -16,6 +17,7 @@ class Charlotte extends React.Component {
             dailyForecast: "Sunny",
             dailyCityName: "Charlotte",
             dailyPic: sun,
+            //these are the values that will be passed into the <Daily /> child
             weeklyTemp1: "68/50",
             weeklyTemp2: "61/53",
             weeklyTemp3: "73/54",
@@ -23,6 +25,8 @@ class Charlotte extends React.Component {
             weeklyTemp5: "81/52",
             weeklyTemp6: "77/60",
             weeklyTemp7: "75/49",
+            //The temperatures are strings for simplicity and quickness
+            //the "weeklyTemp# is passed down into the child class <Weekly/>"
             weeklyPic1: sun,
             weeklyPic2: rain,
             weeklyPic3: sun,
@@ -30,7 +34,14 @@ class Charlotte extends React.Component {
             weeklyPic5: sun,
             weeklyPic6: cloudy,
             weeklyPic7: cloudy
+            // these hold the pictures imported from the weather photos file
+            //each photo was manually selected (due to having a static website with
+            //no API implementation) and stored in state variables. 
+            
+            //the weeklyPic# is passed down into the child class <Weekly />
         }
+        //These are values are held by this.state for the purpose of easily updating the page if 
+        //further functionality were to be added
     }
 
 
@@ -59,6 +70,8 @@ class Charlotte extends React.Component {
                     pic5={this.state.weeklyPic5}
                     pic6={this.state.weeklyPic6}
                     pic7={this.state.weeklyPic7}
+                    // each variable name above is just a reference variable
+                    //so the child components can interact with the state variables
                 />
             </div>
         )
