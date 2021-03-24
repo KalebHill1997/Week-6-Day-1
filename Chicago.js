@@ -8,11 +8,11 @@ import rain from './WeatherPhotos/rain.png'
 import thunderstorm from './WeatherPhotos/thunderstorm.png'
 
 class Chicago extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             dailyTemp: 45,
-            dailyDate: "3/22/2021",
+            dailyDate: "3/23/2021",
             dailyForecast: "Thunderstorming",
             dailyCityName: "Chicago",
             dailyPic: thunderstorm,
@@ -33,8 +33,10 @@ class Chicago extends React.Component {
         }
     }
 
+
     render(){
         return (
+
             <div>
                 <Daily 
                     city={this.state.dailyCityName}

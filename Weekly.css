@@ -3,6 +3,9 @@
     background-color: #6cc2df;
     justify-content: center;
     flex-wrap: wrap;
+    height: auto;
+    min-height: 10px;
+    margin: auto;
 }
 /* This is the large blue area around the boxes for the weekly elements*/
 
@@ -14,16 +17,19 @@
     border: 2px;
     border-style: solid;
     height: 250px;
-    margin: 40px;
+    margin: 20px 40px;
     flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-content: center;
-    border-color: #3b3b3b;
+    border-color: #2c2c2c;
     border-radius: 3%;
-    box-shadow:
+    /* box-shadow:
     0 0 7px 2px rgb(63, 63, 63),
-    0 0 0px 0px black,
-    0 0 0px 0px black;
+    0 0 0px 0px red,
+    0 0 0px 0px blue; */
+    /* animation: fadeInUp;
+    animation-duration: 2s; */
+
 }
 /* This is the container that holds the weekly elements */
 
@@ -54,21 +60,30 @@ nav.navbar.navbar-inverse {
 body {
     background-color: lightblue;
 }
+body::-webkit-scrollbar {
+    display: none;
+}
+
 /* before the border radius was fixed the rounded navbar made the site look unprofessional  */
 
 .navbar {
-    border-radius: 0px;
-}
-
-.navbar {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px
+    /* font-size: 20px ; */
+    border-radius: 0px;
+    animation: slideInDown;
+    animation-duration: 3s;
 }
 
 .nav > li > a{
     padding-right: 30px;
+    font-size: 20px;
 }
+.nav > li > a:hover {
+    animation: rubberBand .68s;
+}
+
 /* adds space to the right of the navbar elements */
+
 
 @media (max-width: 768px) {
     .navbar a {
@@ -77,6 +92,96 @@ body {
     .nav > li > a{
         padding: 10px 15px;
     }
+    
     /* optimized for tablet view */
     /* fixed some navbar elements from looking ugly when sized down a bit */
 }
+@keyframes pulse {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+  
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+#sunday {
+    animation: 
+        fadeInUp 3s,
+        pulse 2.5s infinite 3s;
+}
+#monday {
+    animation: 
+        fadeInUp 2.5s,
+        pulse 2.5s infinite 3.2s;
+}
+
+#tuesday {
+    animation: 
+        fadeInUp 2s,
+        pulse 2.5s infinite 3.4s;
+}
+#wednesday {
+    animation: 
+        fadeInUp 1.8s,
+        pulse 2.5s infinite 3.6s;
+}
+#thursday {
+    animation: 
+        fadeInUp 2s,
+        pulse 2.5s infinite 3.8s;
+
+}
+#friday {
+    animation: 
+        fadeInUp 2.5s,
+        pulse 2.5s infinite 4s;
+
+}
+#saturday {
+    animation: 
+        fadeInUp 3s,
+        pulse 2.5s infinite 4.2s;
+
+
+}
+/* --------------------------- */
+/* #sunday:hover {
+    animation: pulse 3s infinite;
+    transition-property: animation;
+}
+#monday:hover {
+    animation: fadeInUp;
+    animation-duration: 2.5s;
+}
+
+#tuesday:hover {
+    animation: fadeInUp;
+    animation-duration: 2s;
+}
+#wednesday:hover {
+    animation: fadeInUp;
+    animation-duration: 1.8s;
+}
+#thursday:hover {
+    animation: fadeInUp;
+    animation-duration: 2s;
+
+}
+#friday:hover {
+    animation: fadeInUp;
+    animation-duration: 2.5s;
+
+}
+#saturday:hover {
+    animation: fadeInUp;
+    animation-duration: 3s;
+
+} */
+
+/* maybe implement a grow on hover? */
