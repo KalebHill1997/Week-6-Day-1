@@ -16,6 +16,7 @@ class Chicago extends React.Component {
             dailyForecast: "Thunderstorming",
             dailyCityName: "Chicago",
             dailyPic: thunderstorm,
+            dailyTime: 1,
             weeklyTemp1: "63/48",
             weeklyTemp2: "58/51",
             weeklyTemp3: "57/42",
@@ -44,6 +45,7 @@ class Chicago extends React.Component {
                     forecast={this.state.dailyForecast}
                     temp={this.state.dailyTemp}
                     pic={this.state.dailyPic}
+                    time={this.state.dailyTime}
                 />
                 <Weekly 
                     temp1={this.state.weeklyTemp1}

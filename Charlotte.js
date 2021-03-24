@@ -6,7 +6,6 @@ import fahrenheit from './WeatherPhotos/fahrenheit.png'
 import sun from './WeatherPhotos/sun.png'
 import rain from './WeatherPhotos/rain.png'
 import thunderstorm from './WeatherPhotos/thunderstorm.png'
-import ReactDOM from 'react-dom'
 //these are the pictures and child components used within this class
 
 class Charlotte extends React.Component {
@@ -18,6 +17,7 @@ class Charlotte extends React.Component {
             dailyForecast: "Sunny",
             dailyCityName: "Charlotte",
             dailyPic: sun,
+            dailyTime: 0,
             //these are the values that will be passed into the <Daily /> child
             weeklyTemp1: "68/50",
             weeklyTemp2: "61/53",
@@ -45,13 +45,8 @@ class Charlotte extends React.Component {
         //further functionality were to be added
     }
 
-    tick = () => {
-        const element = new Date().toLocaleTimeString()
-        ReactDOM.render(element, document.getElementById('tick'));
-      }
 
     render(){
-        setInterval(this.tick(), 1000)
         return (
             <div>
                 <Daily 
@@ -60,7 +55,7 @@ class Charlotte extends React.Component {
                     forecast={this.state.dailyForecast}
                     temp={this.state.dailyTemp}
                     pic={this.state.dailyPic}
-                    yo={<p id="tick"></p>}
+                    time={this.state.dailyTime}
                 />
                 
                 <Weekly 

@@ -10,6 +10,7 @@ import reportWebVitals from './reportWebVitals';
 import Cary from "./Cary"
 import Charlotte from "./Charlotte"
 import Chicago from "./Chicago"
+import TheTime from "./TheTime"
 
 class Navbar extends Component {
   render(){

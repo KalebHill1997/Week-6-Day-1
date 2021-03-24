@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import './Daily.css'
-import TheTime from "./TheTime"
+
 
 
 function Daily(props) {
@@ -12,7 +12,7 @@ function Daily(props) {
     let thedate = month + "/" + day +  "/" + year;
     //the above calculates the date and puts it into a string
 
-    let hour = d.getHours()
+    let hour = d.getHours() - props.time
     let minute = d.getMinutes()
     let thetime;
     let amorpm;
@@ -48,7 +48,8 @@ function Daily(props) {
                         <div><b>Time:</b> {thetime}</div>
                         <div><b>Forecast:</b> {props.forecast}</div>
                         <div><b>Temp:</b> {props.temp}</div>
-                        <div><b>Temp:</b>{props.yo}</div>
+                        
+                        <div><p id="tick"></p></div>
                         {/* <div><p>hting{setInterval(element = new Date().toLocaleTimeString(), 1000)}</p></div> */}
                         {/* The above are the props passed down from the cities*/}
                         {/* notice how the variable names after props.___
